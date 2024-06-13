@@ -291,7 +291,7 @@ class AppInfoScraper implements ParseHandlerInterface
     {
         if (isset($data[100][0][0][4], $data[100][0][1][3][3])) {
             $videoThumb = (string) $data[100][0][1][3][2];
-            $youtubeId = (string) $data[100][0][4];
+            $youtubeId = (string) $data[100][0][0][4];
             $youtubeId = str_replace('yt:', '', strtok($youtubeId, '?'));
             $videoUrl = 'https://www.youtube.com/embed/' . $youtubeId . '?ps=play&vq=large&rel=0&autohide=1&showinfo=0';
 
